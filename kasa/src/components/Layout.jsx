@@ -1,20 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/images/LOGO.png';
 
 export default function Layout({ children }) {
   return (
     <div>
       <header>
         <nav>
+          <div className="logo-header">
+            <img src={logo} alt="Logo Kasa" className="logo" />
+          </div>
           <ul>
-            <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/a-propos">À propos</Link></li>
+            <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Accueil</NavLink></li>
+            <li><NavLink to="/a-propos" className={({ isActive }) => (isActive ? 'active' : '')}>A propos</NavLink></li>
           </ul>
         </nav>
       </header>
       <main>{children}</main>
       <footer>
-        <p>Kasa © 2020</p>
+        <p>© 2020 Kasa. All rights reserved</p>
       </footer>
     </div>
   );
