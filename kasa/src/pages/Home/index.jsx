@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Home'; 
+import Logements from '../../components/Logements';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <div className="banner-overlay"></div>
         <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
       </div>
+      <Logements />
     </div>
   );
 }
