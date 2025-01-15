@@ -23,7 +23,7 @@ header {
     margin-right: 20px; 
     width: 145px;
     height: 46.88px;   
-    margin-left: 20px;
+    margin-left: 120px;
 }
 
 /* Nav */
@@ -41,15 +41,12 @@ nav ul {
     height: 68px;
     align-items: center;
 }
-  
-nav ul li {
-    margin-right: 20px;
-    gap: 57px;                 
-}
 
 nav ul {
     gap: 57px;  
+    margin-left: -204px;
 }
+
 
 nav a {
     text-decoration: none;

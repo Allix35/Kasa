@@ -1,0 +1,54 @@
+
+@use '../variables' as *;
+
+.banner-elements {
+    .banner {
+      position: relative;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden; /* Pour s'assurer que l'overlay et l'image ne débordent pas */
+
+      .banner-image {
+        position: absolute;
+        object-fit: cover;
+        z-index: -2;
+        width: 1240px;
+        height: 223px;
+        top: 20px;
+        border-radius: 25px;
+        box-shadow: 0px 4px 4px 0px #00000040;
+      }
+
+/* Overlay sombre */
+
+      .banner-overlay {
+        position: absolute;
+        top: 21px;
+        left: 139px;
+        width: 1240px;
+        height: 223px;
+        background-color: rgba(0, 0, 0, 0.5); /* Ombre noire avec transparence */
+        z-index: -1; /* Assure que l'overlay est derrière le texte */
+        border-radius: 25px;
+      }
+  
+      .banner-title {
+        font-family: $font-text;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 68.45px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        color: $secondary-color;
+        margin: 0;
+        display: inline-block;
+        -webkit-text-stroke: 1px #000;
+        height: 144px;
+        z-index: 1;
+      }
+    }
+  }
+  
