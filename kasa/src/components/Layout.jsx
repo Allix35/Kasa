@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/LOGO.png';
+import logoFooter from '../assets/images/Logofooter.png'
 
 export default function Layout({ children }) {
   return (
@@ -18,7 +19,10 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer>
-        <p>© 2020 Kasa. All rights reserved</p>
+        <div className="footer-elements">
+          <img src={logoFooter} alt="Logo Kasa" className="footer-logo" />
+          <p>© 2020 Kasa. All rights reserved</p>
+        </div>
       </footer>
     </div>
   );
