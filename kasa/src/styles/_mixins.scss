@@ -1,4 +1,4 @@
-// Mixin pour la carte
+@use '../styles/variables' as *;
 
 @mixin housing-card-style($bg-color, $border-radius) {
     position: relative;
@@ -7,8 +7,21 @@
     background-color: $bg-color;
     border-radius: $border-radius;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
 }
+
+@mixin overlay-card-style($overlay-color, $opacity) {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 340px;
+    height: 340px;
+    background: rgba($overlay-color, $opacity);  // Application de la couleur et de l'opacité
+    border-radius: 10px;
+    z-index: 1;
+  }
 
 @mixin housing-image-style() {
     width: 100%;
@@ -21,14 +34,16 @@
 
 @mixin housing-title-style() {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-family: Montserrat, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 25.67px;
-    color: #fff;
+    color: white;
     padding: 5px 10px;
+    z-index: 2;
+    width: 300px;
+    bottom: 20px;
+    left: 30px;
 }
   
 

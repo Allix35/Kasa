@@ -15,14 +15,13 @@ header {
     display: flex;
     align-items: center;  
     justify-content: space-between;
-    align-items: center;
     width: 100%;         
 }
   
 .logo {                
     margin-right: 20px; 
-    width: 145px;
-    height: 46.88px;   
+    width: 210.32px;
+    height: 68px;
     margin-left: 120px;
 }
 
@@ -40,11 +39,8 @@ nav ul {
     width: 1240px;
     height: 68px;
     align-items: center;
-}
-
-nav ul {
     gap: 57px;  
-    margin-left: -204px;
+    margin-left: -269px;
 }
 
 
@@ -72,7 +68,7 @@ footer {
     align-items: center;      
     height: 200px;            
     background-color: $primary-color;
-    margin-top: 330px;  
+    margin-top: 60px;  
 }
   
 .footer-elements {
