@@ -18,7 +18,7 @@
     left: 20px;
     width: 340px;
     height: 340px;
-    background: rgba($overlay-color, $opacity);  // Application de la couleur et de l'opacité
+    background: rgba($overlay-color, $opacity);  
     border-radius: 10px;
     z-index: 1;
   }
@@ -30,8 +30,6 @@
     border-radius: 10px;
 }
   
- // Mixin pour le titre du logement
-
 @mixin housing-title-style() {
     position: absolute;
     font-family: "Montserrat", sans-serif;

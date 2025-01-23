@@ -1,7 +1,8 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/LOGO.png';
 import logoFooter from '../assets/images/Logofooter.png'
+import PropTypes from 'prop-types';
+
 
 export default function Layout({ children }) {
   return (
@@ -13,7 +14,7 @@ export default function Layout({ children }) {
           </div>
           <ul>
             <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Accueil</NavLink></li>
-            <li><NavLink to="/a-propos" className={({ isActive }) => (isActive ? 'active' : '')}>A propos</NavLink></li>
+            <li><NavLink to="/a-propos" className={({ isActive }) => (isActive ? 'active' : '')}>A Propos</NavLink></li>
           </ul>
         </nav>
       </header>
@@ -27,3 +28,7 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired, 
+};

@@ -3,52 +3,52 @@
 @use '../mixins' as *;
 
 .banner-elements {
-    .banner {
-      position: relative;
-      height: 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 10px;
-      overflow: hidden; /* Pour s'assurer que l'overlay et l'image ne débordent pas */
+  .banner {
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; 
 
-      .banner-image {
-        position: absolute;
-        object-fit: cover;
-        z-index: -2;
-        width: 1240px;
-        height: 223px;
-        top: 20px;
-        border-radius: 25px;
-        box-shadow: 0px 4px 4px 0px #00000040;
-      }
+  .banner-image {
+    position: absolute;
+    object-fit: cover;
+    z-index: -2;
+    width: 1240px;
+    height: 223px;
+    top: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
 
-/* Overlay sombre */
+/* Overlay */
 
-      .banner-overlay {
-        position: absolute;
-        top: 21px;
-        left: 139px;
-        width: 1240px;
-        height: 223px;
-        background-color: rgba(0, 0, 0, 0.5); 
-        z-index: -1; 
-        border-radius: 25px;
-      }
+  .banner-overlay {
+    position: absolute;
+    top: 21px;
+    left: 139px;
+    width: 1240px;
+    height: 223px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+    border-radius: 25px;
+  }
   
-      .banner-title {
-        font-family: $font-text;
-        font-size: 48px;
-        font-weight: 700;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        color: $secondary-color;
-        -webkit-text-stroke: 1px #000;
-        z-index: 1;
-        margin-bottom: 111px;
-      }
+  .banner-title {
+      font-family: $font-text;
+      font-size: 48px;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      color: $secondary-color;
+     -webkit-text-stroke: 1px $primary-color;
+      z-index: 1;
+      margin-bottom: 111px;
     }
   }
+}
   
   /* Housing container */
 
