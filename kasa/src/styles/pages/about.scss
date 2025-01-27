@@ -1,33 +1,32 @@
+@use '../variables' as *;
 
 // About banner page 
 
 .about-banner {
-    position: relative;
-    width: 1240px;
-    height: 223px;
-    margin: 0 auto;  
-    overflow: hidden;
-  
-    .about-banner-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; 
-      border-radius: 25px;
-    }
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  margin: 0 auto;  
+  overflow: hidden;
+
+  .about-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 25px;
+  }
 
 .banner-overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1240px;
-    height: 223px;
-    background-color: rgba(0, 0, 0, 0.3); 
-    z-index: 0; 
-    border-radius: 25px;
-    }   
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1240px;
+  height: 223px;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 0; 
+  border-radius: 25px;
+}   
 }
- 
-// Collapse
 
 .collapse {
   padding-top: 35px;
@@ -38,8 +37,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FF6060;
-    color: white;
+    background-color: $tertiary-color;
+    color: $secondary-color;
     font-weight: 700;
     font-size: 20px;
     line-height: 34.22px;
@@ -52,12 +51,18 @@
   }
 
   .collapse-content {
-    padding: 10px;
+    padding: 8px;
     margin-top: 10px;
+    font-size: 18px;
+    line-height: 25.67px;
+    max-height: 0; /* Par défaut, la hauteur est nulle (contenu caché) */
+    overflow: hidden; /* Cache le contenu lorsqu'il est caché */
+    transition: max-height 0.3s ease-in-out;
   }
-
+  
   &.open .collapse-content {
     display: block;
+    max-height: 500px;
   }
 
   .collapse-button {
@@ -73,15 +78,21 @@
   }
 
   .arrow-icon {
-    font-size: 24px;
-    transition: transform 0.3s ease; 
-    transform: rotate(0deg);
+    font-size: 24px; /* Ajuste la taille de l'icône */
+    transition: transform 0.5s ease-in-out; /* Transition douce pour la rotation */
   }
   
-  .collapse.open .arrow-icon {
-    transform: rotate(180deg); 
+  .rotate {
+    transform: rotate(-180deg); /* Rotation de 180° quand 'isOpen' est vrai */
   }
-}
+}  
+
+
+
+
+
+
+
 
 
 

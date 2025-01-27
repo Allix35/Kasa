@@ -26,7 +26,7 @@ export default function AppRouter() {
           }
         />
         <Route
-          path="/fiche-logement/:id"
+          path="/logement/:id"
           element={
             <Layout>
               <FicheLogement />
@@ -45,3 +45,5 @@ export default function AppRouter() {
     </Router>
   );
 }
+
+

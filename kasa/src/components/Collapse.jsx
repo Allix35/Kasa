@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '../styles/pages/about.scss';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'; // Utilise uniquement faAngleUp
 
 const Collapse = ({ isOpen, children, title, onClick }) => {
   return (
@@ -10,8 +10,8 @@ const Collapse = ({ isOpen, children, title, onClick }) => {
         <span>{title}</span>
         <button className="collapse-button" onClick={onClick}>
           <FontAwesomeIcon 
-            icon={isOpen ? faAngleDown : faAngleUp} 
-            className="arrow-icon" 
+            icon={faAngleUp} 
+            className={`arrow-icon ${isOpen ? 'rotate' : ''}`} // Applique la classe de rotation lorsque isOpen est vrai
           />
         </button>
       </div>
@@ -28,6 +28,13 @@ Collapse.propTypes = {
 };
 
 export default Collapse;
+
+
+
+
+
+
+
 
 
 

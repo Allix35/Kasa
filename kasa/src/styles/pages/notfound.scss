@@ -1,0 +1,43 @@
+@use '../variables' as *;
+
+.notfound-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $secondary-color;
+    margin-bottom: 180px;
+  
+    .nofound-content {
+        text-align: center;
+    }
+  
+    .notfound-title {
+        color: $tertiary-color;
+        font-family: $font-text;
+        font-size: 288px;
+        font-weight: 700;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }  
+  
+    .notfound-text {
+        font-size: 24px;
+        color:$tertiary-color;
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 150px;
+        margin-top: -90px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }   
+  
+    .notfound-return-link {
+        font-size: 18px;
+        color: $primary-color;
+    }
+}
+  
+  
