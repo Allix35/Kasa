@@ -25,7 +25,7 @@
   background-color: rgba(0, 0, 0, 0.3); 
   z-index: 0; 
   border-radius: 25px;
-}   
+  }   
 }
 
 .collapse {
@@ -55,8 +55,8 @@
     margin-top: 10px;
     font-size: 18px;
     line-height: 25.67px;
-    max-height: 0; /* Par défaut, la hauteur est nulle (contenu caché) */
-    overflow: hidden; /* Cache le contenu lorsqu'il est caché */
+    max-height: 0; 
+    overflow: hidden; 
     transition: max-height 0.3s ease-in-out;
   }
   
@@ -78,12 +78,12 @@
   }
 
   .arrow-icon {
-    font-size: 24px; /* Ajuste la taille de l'icône */
-    transition: transform 0.5s ease-in-out; /* Transition douce pour la rotation */
+    font-size: 24px; 
+    transition: transform 0.3s ease; 
   }
   
   .rotate {
-    transform: rotate(-180deg); /* Rotation de 180° quand 'isOpen' est vrai */
+    transform: rotate(-180deg); 
   }
 }  
 

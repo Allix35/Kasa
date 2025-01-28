@@ -1,5 +1,5 @@
 import '../Home'; 
-import Logements from '../../components/Logements';
+import Logements from '../../components/Cards';
 
 export default function Home() {
   return (

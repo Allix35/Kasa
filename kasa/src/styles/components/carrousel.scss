@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; // S'assure que les images ne débordent pas
+  overflow: hidden; 
 }
 
 .left-arrow, .right-arrow {
@@ -17,7 +17,6 @@
   top: 50%;
   transform: translateY(-50%);
   color: $secondary-color;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
   z-index: 10;

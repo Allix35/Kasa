@@ -1,0 +1,208 @@
+@use '../variables' as *;
+
+// Housing form text
+
+.housing-form {
+  position: relative;
+  font-family: $font-text;
+}
+
+.housing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.housing-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 140px;
+}
+
+.housing-form-title {
+  color: $tertiary-color;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 5px; /* Ajuster la marge sous le titre */
+}
+
+.housing-location {
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+}
+
+.host-name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; /* Réduction de l'espace entre le nom et la photo */
+  margin-bottom: 0; /* Pas de marge sous le nom */
+}
+
+.first-name,
+.last-name {
+  font-size: 1.2rem;
+  color: $tertiary-color;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.host-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 139px;
+}
+
+.tags-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.tags-info {
+  flex: 1;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: $font-text;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    padding-left: 10px;
+
+    li {
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      width: 115px;
+      height: 25px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-top: -25px;
+    }
+  }
+}
+
+.rating-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+
+  .stars {
+    display: flex;
+    gap: 12px;
+    color: #e3e3e3;
+    padding-right: 9px;
+    margin-top: -35px;
+  }
+
+  .active-stars {
+    color: $tertiary-color;
+  }
+}
+
+// Collapse
+
+.housing-form-collapse-container {
+  display: flex;
+  width: 1240px;
+  gap: 76px;
+  margin-top: 5px;
+  padding-left: 140px;
+}
+
+.housing-form-collapse {
+  flex: 1;
+
+  .collapse-elements {
+    font-size: 18px;
+    color: $secondary-color;
+    background-color: $tertiary-color;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .fa-chevron-up {
+    transition: transform 0.3s ease;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+  }
+
+  &.open {
+    background-color: #F6F6F6; 
+    border-radius: 0 0 8px 8px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 20px;
+
+    li {
+      font-size: 1rem;
+      color: $primary-color;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.housing-description {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// Host
+
+.housing-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.host-info {
+  font-size: 18px;
+  line-height: 25.67px;
+  text-align: right;
+
+  .host-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $tertiary-color;
+  }
+}
+
+
+
