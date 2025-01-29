@@ -66,10 +66,35 @@
 }
   
 .housing-card {
-    @include housing-card-style(#F6F6F6, 10px);
+  @include housing-card-style(#F6F6F6, 10px);
+  position: relative;
+  overflow: hidden;  /* Pour s'assurer que la carte reste bien à l'intérieur des limites */
+  transition: transform 0.3s ease; /* Transition pour les transformations */
 
-    &::after {
-    @include overlay-card-style(black, 0.2);
+  /* Animation au survol */
+  &:hover {
+    transform: scale(1.05);  /* Agrandissement de la carte */
+  }
+
+  .housing-image {
+    transition: transform 0.3s ease;  /* Animation pour la rotation de l'image */
+  }
+
+  .housing-title {
+    transition: transform 0.3s ease;  /* Animation pour la translation du texte */
+  }
+
+  &:hover .housing-image {
+    transform: rotate(2deg);  /* Rotation de l'image au survol */
+  }
+
+  &:hover .housing-title {
+    transform: rotate(2deg);   /* Décalage du texte vers le haut */
+  }
+
+  &::after {
+    @include overlay-card-style(black, 0.2);  /* Garde l'overlay d'origine sans changement */
+    display: none;  /* Empêche l'affichage de l'overlay au survol */
   }
 }
   

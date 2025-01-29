@@ -77,13 +77,13 @@ footer {
     justify-content: center;  
     align-items: center;     
     text-align: center;      
-    color: $secondary-color;            
+    color: $secondary-color;  
+    margin-top: -60px;          
 }
   
 .footer-logo {           
-    margin-bottom: 10px;
     width: 122px;
-    margin-top: 85px;
+    padding-bottom: 25px;
 }
   
 footer p {         
@@ -92,5 +92,6 @@ footer p {
     font-size: 24px;
     font-weight: 500;
     line-height: 34.22px;
+    margin-bottom: -85px;
 }
   

@@ -16,22 +16,24 @@
     border-radius: 25px;
   }
 
-.banner-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 1240px;
-  height: 223px;
-  background-color: rgba(0, 0, 0, 0.3); 
-  z-index: 0; 
-  border-radius: 25px;
+  .banner-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1240px;
+    height: 223px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 0; 
+    border-radius: 25px;
   }   
 }
 
+// Collapse
+
 .collapse {
-  padding-top: 35px;
   max-width: 1024px;
   margin: 0 auto;
+  margin-top: 35px;
 
   .collapse-elements {
     display: flex;
@@ -43,26 +45,24 @@
     font-size: 20px;
     line-height: 34.22px;
     border: none;
-    width: 1023px;
+    width: 100%;  /* Assure que l'élément prenne toute la largeur */
     height: 52px;
-    border-radius: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 0;  /* Enlève toute marge supplémentaire */
+    border-radius: 5px;
+    box-sizing: border-box;
   }
 
   .collapse-content {
-    padding: 8px;
-    margin-top: 10px;
+    padding: 15px;
     font-size: 18px;
     line-height: 25.67px;
     max-height: 0; 
     overflow: hidden; 
     transition: max-height 0.3s ease-in-out;
-  }
-  
-  &.open .collapse-content {
-    display: block;
-    max-height: 500px;
+    width: 100%;  
+    box-sizing: border-box;
   }
 
   .collapse-button {
@@ -81,11 +81,28 @@
     font-size: 24px; 
     transition: transform 0.3s ease; 
   }
-  
+
   .rotate {
     transform: rotate(-180deg); 
   }
-}  
+
+  &.open {
+    background-color: #F6F6F6; /* Fond plus clair lorsque ouvert */
+    border-radius: 0 0 8px 8px;
+    
+    .collapse-content {
+      display: block;
+      max-height: 500px;
+      width: auto; /* S'ajuste au contenu */
+    }
+  }
+}
+
+
+
+
+
+
 
 
 
