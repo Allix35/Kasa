@@ -5,13 +5,20 @@ export default function Home() {
   return (
     <div className="banner-elements">
       <div className="banner">
-        <img src="/src/assets/images/Imagesource1.png" alt="Bannière" className="banner-image"/>
+        <img 
+          src="/src/assets/images/Imagesource1.png" 
+          alt="Bannière" 
+          className="banner-image"
+        />
         <div className="banner-overlay"></div>
-        <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+        <h1 className="banner-title">
+          Chez vous, <span>partout et ailleurs</span>
+        </h1>
       </div>
       <Logements />
     </div>
   );
 }
+
 
   

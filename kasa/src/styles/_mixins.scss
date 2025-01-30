@@ -7,7 +7,6 @@
     background-color: $bg-color;
     border-radius: $border-radius;
     overflow: hidden;
-    padding: 20px;
     cursor: pointer;
 }
 
@@ -32,16 +31,15 @@
   
 @mixin housing-title-style() {
     position: absolute;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-text;
     font-size: 18px;
     font-weight: 700;
     line-height: 25.67px;
-    color: white;
-    padding: 5px 10px;
+    color: $secondary-color;
     z-index: 2;
     width: 300px;
-    bottom: 20px;
-    left: 30px;
+    bottom: 0px;
+    left: 22px;  
 }
 
 

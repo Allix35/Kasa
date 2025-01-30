@@ -1,5 +1,9 @@
-@use 'variables';   
-@use 'mixins';  
-@use './components/layout.scss';
-@use '_global.scss';
-@use '../styles/pages/home';
+@use '../styles/variables' as variables;
+@use '../styles/mixins' as mixins;
+@use '../styles/components/layout' as layout;
+@use '../styles/pages/home' as home;
+@use '../styles/components/carrousel' as carrousel;
+@use '../styles/pages/about' as about;
+@use '../styles/pages/fichelogement' as fichelogement;
+@use '../styles/pages/notfound' as notfound;
+
