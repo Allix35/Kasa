@@ -81,18 +81,21 @@ export default function FicheLogement() {
 
           {/* Equipments Collapse */}
           <div className={`housing-form-collapse ${isEquipmentsOpen ? 'open' : ''}`}>
-            <button className="collapse-elements" onClick={toggleEquipments}>
+            <div className="collapse-equipment">
+              <button className="collapse-elements" onClick={toggleEquipments}>
               Équipements
               <i className={`fa-solid fa-chevron-up ${isEquipmentsOpen ? 'rotate' : ''}`} />
-            </button>
-            {isEquipmentsOpen && (
-              <ul>
-                {logement.equipments.map((equip, index) => (
-                  <li key={index}>{equip}</li>
+              </button>
+           {isEquipmentsOpen && (
+            <ul>
+              {logement.equipments.map((equip, index) => (
+               <li key={index}>{equip}</li>
                 ))}
-              </ul>
+            </ul>
             )}
+            </div>
           </div>
+
         </div>
       </div>
     </div>

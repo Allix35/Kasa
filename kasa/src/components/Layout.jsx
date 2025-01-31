@@ -22,7 +22,7 @@ export default function Layout({ children }) {
       <footer>
         <div className="footer-elements">
           <img src={logoFooter} alt="Logo Kasa" className="footer-logo" />
-          <p>© 2020 Kasa. All rights reserved</p>
+          <p>© 2020 Kasa. All <span>rights reserved</span></p>
         </div>
       </footer>
     </div>

@@ -1,6 +1,7 @@
 @use '../variables' as *;
 
 /* Header */
+
 header {
     display: flex;
     justify-content: space-between;  
@@ -9,6 +10,7 @@ header {
 }
 
 /* Logo */
+
 .logo-header {
     display: flex;
     align-items: center;  
@@ -24,6 +26,7 @@ header {
 }
 
 /* Nav */
+
 nav {
     display: flex;
     justify-content: center;
@@ -57,13 +60,13 @@ nav a.active {
 }
 
 /* Footer */
+
 footer {
     display: flex;
     justify-content: center;  
     align-items: center;      
     height: 200px;            
     background-color: $primary-color;
-    margin-top: 60px;  
 }
 
 .footer-elements {
@@ -91,7 +94,9 @@ footer p {
 }
 
 @media (max-width: 768px) {
+
     /* Header */
+
     header {
       flex-direction: column;
       align-items: center;
@@ -117,24 +122,32 @@ footer p {
     }
 
     nav a {
-      font-size: 12px;  /* Ajuster la taille de la police sur mobile */
+      font-size: 12px;  
       text-transform: uppercase;
+      font-weight: 500;
     }
 
 
     /* Footer */
+
     footer {
-      padding: 20px 10px;  /* Ajuster le padding pour mobile */
+      padding: 20px 10px;  
     }
 
     .footer-logo {
-      width: 80px;
+      width: 135px;
       padding-bottom: 10px;
     }
 
     footer p {
-      font-size: 14px;  /* Réduire la taille du texte dans le footer */
+      font-size: 14px;  
     }
+
+    footer p span {
+      display: block; 
+      margin-top: 5px; 
+      line-height: 0px;
+  }
 }
 
 

@@ -55,22 +55,21 @@
 .housing-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales sur desktop */
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: #F6F6F6;
   border-radius: 25px;
   width: 1240px;
   margin: 0 auto;
-  justify-items: center; /* Centre les cartes horizontalement */
-  gap: 20px; /* Espacement uniforme entre les cartes */
+  justify-items: center; 
+  margin-bottom: 40px;
+  padding: 10px;
 }
 
+/* Housing card */
 .housing-card {
   @include housing-card-style(#F6F6F6, 10px);
-  transition: transform 0.3s ease;
-  width: 100%; /* Les cartes prennent toute la largeur disponible dans chaque cellule */
-  max-width: 340px; /* Max-width pour contrôler la taille des cartes */
+  transition: transform 0.3s ease; 
   margin: 0 auto;
+  margin: 20px;
 
   &:hover {
     transform: scale(1.05);
@@ -106,18 +105,19 @@
   @include housing-title-style();
 }
 
-
+/* Version Mobile */
 
 @media (max-width: 768px) {
   .banner-elements .banner {
-    width: 100%; /* Prend toute la largeur */
-    height: auto;
-    border-radius: 10px; /* Border-radius de 10px pour la version mobile */
-    overflow: hidden; /* Empêche l'image de déborder des bords arrondis */
+    width: 335px; 
+    height: 111px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin-bottom: 20px;
   }
 
   .banner-elements .banner .banner-overlay {
-    border-radius: 10px; /* Assure que l'overlay a un border-radius de 10px en mobile */
+    border-radius: 10px; 
   }
 
   .banner-elements .banner .banner-title {
@@ -125,9 +125,9 @@
     white-space: normal;
     text-align: left;
     line-height: 1.2;
-    -webkit-text-stroke: none; /* Supprime le contour sur mobile */
+    -webkit-text-stroke: none; 
     text-shadow: none;
-    margin-left: -160px;
+    margin-left: -85px;
   }
 
   .banner-title span {
@@ -139,20 +139,24 @@
   }
 
   .banner-image {
-    width: 100%;
-    height: auto;
-  }
+      transform: translateX(-24%) translateY(-106px);
+    }
 
   .housing-container {
-    grid-template-columns: 1fr; 
+    margin-top: 0;
+    grid-template-columns: 1fr; /* 1 colonne en mobile */
     width: 100%;
-    margin-left: 0;
+    padding: 0px;
     background-color: $secondary-color;
+    gap: 10px;
   }
 
   .housing-card {
-    width: 90%;
     margin: 10px auto;
     background-color: $secondary-color;
+    width: 335px;
+    height: 255px;
+    border-radius: 10px;
   }
 }
+

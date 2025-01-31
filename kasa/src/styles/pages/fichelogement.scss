@@ -1,6 +1,7 @@
 @use '../variables' as *;
 
 // Housing form text (Desktop and Mobile - Common Styles)
+
 .housing-form {
   position: relative;
   font-family: $font-text;
@@ -121,6 +122,7 @@
   gap: 76px;
   margin-top: 5px;
   padding-left: 140px;
+  margin-bottom: 40px;
 }
 
 .housing-form-collapse {
@@ -199,7 +201,9 @@
 }
 
 // Mobile-specific styles
+
 @media (max-width: 768px) {
+
   .housing-header {
     flex-direction: column;
     align-items: flex-start;
@@ -304,7 +308,7 @@
   .housing-form-collapse-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;  /* Augmenter l'espace entre chaque collapse */
     padding-left: 0;
     padding-right: 0;
     max-width: 100%;
@@ -313,14 +317,18 @@
 
   .housing-form-collapse {
     width: 100%;
+    margin-bottom: 15px; /* Espacement sous le dernier collapse avant le footer */
     .collapse-elements {
       font-size: 16px;
-      padding: 8px;
       text-align: left;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+       
+    .collapse-equipment {
+      margin-bottom: 15px;  /* Réduit l'espace sous la section "Équipements" */
     }
 
     ul {
@@ -338,5 +346,3 @@
     padding-right: 0;
   }
 }
-
-

@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="banner-title">
           Chez vous, <span>partout et ailleurs</span>
         </h1>
-      </div>
+      </div >
       <Logements />
     </div>
   );
