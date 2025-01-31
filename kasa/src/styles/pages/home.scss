@@ -125,7 +125,7 @@
     white-space: normal;
     text-align: left;
     line-height: 1.2;
-    -webkit-text-stroke: none !important; /* Supprime le contour sur mobile */
+    -webkit-text-stroke: none; /* Supprime le contour sur mobile */
     text-shadow: none;
     margin-left: -160px;
   }

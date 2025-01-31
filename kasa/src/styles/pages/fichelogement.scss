@@ -1,7 +1,6 @@
 @use '../variables' as *;
 
-// Housing form text
-
+// Housing form text (Desktop and Mobile - Common Styles)
 .housing-form {
   position: relative;
   font-family: $font-text;
@@ -24,7 +23,7 @@
   color: $tertiary-color;
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 5px; /* Ajuster la marge sous le titre */
+  margin-bottom: 5px;
 }
 
 .housing-location {
@@ -42,8 +41,7 @@
 .host-name {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; /* Réduction de l'espace entre le nom et la photo */
-  margin-bottom: 0; /* Pas de marge sous le nom */
+  margin-bottom: 0;
 }
 
 .first-name,
@@ -51,8 +49,8 @@
   font-size: 1.2rem;
   color: $tertiary-color;
   font-weight: 500;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .host-image {
@@ -117,8 +115,6 @@
   }
 }
 
-// Collapse
-
 .housing-form-collapse-container {
   display: flex;
   width: 1240px;
@@ -154,7 +150,7 @@
   }
 
   &.open {
-    background-color: #F6F6F6; 
+    background-color: #F6F6F6;
     border-radius: 0 0 8px 8px;
   }
 
@@ -175,8 +171,6 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-
-// Host
 
 .housing-details {
   display: flex;
@@ -204,5 +198,145 @@
   }
 }
 
+// Mobile-specific styles
+@media (max-width: 768px) {
+  .housing-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .housing-info {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .housing-form-title {
+    font-size: 1.6rem;
+  }
+
+  .housing-location {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  /* Tags under the location, aligned to the left */
+  .tags-rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .tags-info {
+    width: 100%;
+    margin-bottom: 10px;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 20px;
+      text-align: left;
+      padding-left: 0;
+
+      li {
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        white-space: nowrap;
+        max-width: 100px;
+      }
+    }
+  }
+
+  /* Align stars under tags to the left */
+  .rating-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+
+    .stars {
+      display: flex;
+      gap: 8px;
+      color: #e3e3e3;
+
+      .active-stars {
+        color: $tertiary-color;
+      }
+    }
+  }
+
+  /* Host info aligned to the right under stars */
+  .host-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .host-name {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  .host-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .housing-form-collapse-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .housing-form-collapse {
+    width: 100%;
+    .collapse-elements {
+      font-size: 16px;
+      padding: 8px;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul {
+      padding-left: 0;
+      li {
+        font-size: 1rem;
+        color: $primary-color;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .housing-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 

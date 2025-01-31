@@ -71,7 +71,15 @@
 }
 
 
+@media (max-width: 768px) {
+  .carrousel {
+    height: 250px; // Adjust the height for mobile
+  }
 
+  .left-arrow, .right-arrow {
+    font-size: 60px; // Smaller arrows for mobile
+  }
+}
 
 
 
