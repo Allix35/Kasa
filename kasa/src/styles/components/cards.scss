@@ -1,0 +1,54 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/* Housing card */
+
+.housing-card {
+    @include housing-card-style(#F6F6F6, 10px);
+    transition: transform 0.3s ease; 
+    margin: 0 auto;
+    margin: 20px;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .housing-image {
+      transition: transform 0.3s ease;
+    }
+  
+    .housing-title {
+      transition: transform 0.3s ease;
+    }
+  
+    &:hover .housing-image {
+      transform: rotate(2deg);
+    }
+  
+    &:hover .housing-title {
+      transform: rotate(2deg);
+    }
+  
+    &::after {
+      @include overlay-card-style(black, 0.2);
+      display: none;
+    }
+  }
+  
+  .housing-image {
+    @include housing-image-style();
+  }
+  
+  .housing-title {
+    @include housing-title-style();
+  }
+
+  @media (max-width: 768px) {
+    .housing-card {
+        margin: 0px auto;
+        background-color: $secondary-color;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }

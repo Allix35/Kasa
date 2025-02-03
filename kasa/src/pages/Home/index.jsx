@@ -1,4 +1,5 @@
-import '../Home'; 
+import '../../styles/components/cards.scss';
+import '../../styles/pages/home.scss';
 import Logements from '../../components/Cards';
 
 export default function Home() {

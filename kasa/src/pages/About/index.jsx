@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../styles/pages/about.scss';
+import '../../styles/components/collapse.scss';
 import Collapse from '../../components/Collapse';
 
 export default function About() {

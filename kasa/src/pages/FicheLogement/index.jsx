@@ -4,6 +4,7 @@ import logementsData from '../../assets/logements.json';
 import Carousel from '../../components/Carrousel';
 import NotFound from '../NotFound';
 import '../../styles/pages/fichelogement.scss';
+import '../../styles/components/carrousel.scss';
 
 export default function FicheLogement() {
   const { id } = useParams();
@@ -33,29 +34,27 @@ export default function FicheLogement() {
           <div className="housing-info">
             <h1 className="housing-form-title">{logement.title}</h1>
             <p className="housing-location">{logement.location}</p>
+
+            {/* Tags sous la location */}
+            <div className="tags-info">
+              <ul>
+                {logement.tags.map((tag, index) => (
+                  <li key={index}>{tag}</li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Host info (photo et nom) */}
+          {/* Host Info */}
           <div className="host-info">
             <div className="host-name">
-              {/* Séparation du prénom et nom de famille */}
               <p className="first-name">{logement.host.name.split(' ')[0]}</p>
               <p className="last-name">{logement.host.name.split(' ')[1]}</p>
             </div>
             <img src={logement.host.picture} alt={logement.host.name} className="host-image" />
           </div>
-        </div>
 
-        {/* Tags et Rating (étoiles) */}
-        <div className="tags-rating-container">
-          <div className="tags-info">
-            <ul>
-              {logement.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-
+          {/* Stars under host info */}
           <div className="rating-info">
             <div className="stars">
               {[...Array(5)].map((_, index) => (
@@ -68,9 +67,8 @@ export default function FicheLogement() {
           </div>
         </div>
 
-        {/* Collapse */}
+        {/* Collapse sections */}
         <div className="housing-form-collapse-container">
-          {/* Description Collapse */}
           <div className={`housing-form-collapse ${isDescriptionOpen ? 'open' : ''}`}>
             <button className="collapse-elements" onClick={toggleDescription}>
               Description
@@ -79,28 +77,32 @@ export default function FicheLogement() {
             {isDescriptionOpen && <p className="housing-description">{logement.description}</p>}
           </div>
 
-          {/* Equipments Collapse */}
           <div className={`housing-form-collapse ${isEquipmentsOpen ? 'open' : ''}`}>
-            <div className="collapse-equipment">
+            <div className="housing-equipment">
               <button className="collapse-elements" onClick={toggleEquipments}>
-              Équipements
-              <i className={`fa-solid fa-chevron-up ${isEquipmentsOpen ? 'rotate' : ''}`} />
+                Équipements
+                <i className={`fa-solid fa-chevron-up ${isEquipmentsOpen ? 'rotate' : ''}`} />
               </button>
-           {isEquipmentsOpen && (
-            <ul>
-              {logement.equipments.map((equip, index) => (
-               <li key={index}>{equip}</li>
-                ))}
-            </ul>
-            )}
+              {isEquipmentsOpen && (
+                <ul>
+                  {logement.equipments.map((equip, index) => (
+                    <li key={index}>{equip}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
-
         </div>
       </div>
     </div>
   );
 }
+
+
+
+
+
+
 
 
 

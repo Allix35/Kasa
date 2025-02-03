@@ -1,0 +1,96 @@
+@use '../variables' as *;
+
+.collapse {
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  
+    .collapse-elements {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $font-text;
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 34.22px;
+      border: none;
+      width: 1023px; 
+      height: 52px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  
+    .collapse-content {
+      font-family: $font-text;
+      padding: 15px;
+      font-size: 18px;
+      line-height: 25.67px;
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.3s ease-in-out;
+      width: 100%;  
+      box-sizing: border-box;
+      align-items: flex-start;
+      margin-bottom: 35px;
+    }
+  
+    .collapse-button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .arrow-icon {
+      font-size: 24px; 
+      transition: transform 0.3s ease; 
+    }
+  
+    .rotate {
+      transform: rotate(-180deg); 
+    }
+  
+    &.open {
+      background-color: #F6F6F6; 
+      border-radius: 0 0 8px 8px;
+      
+      .collapse-content {
+        display: block;
+        max-height: 500px;
+        width: auto; 
+      }
+    }
+  }
+
+
+@media (max-width: 768px) {
+  .collapse .collapse-elements {
+    width: 100%;  
+    height: 52px; 
+    padding-left: 15px;
+    padding-right: 15px; 
+    border-radius: 5px;
+  }
+
+  .collapse-content {
+    font-family: $font-text;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 25.67px;
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-in-out;
+    width: 100%;  
+    box-sizing: border-box;
+  }
+}

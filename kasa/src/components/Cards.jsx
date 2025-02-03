@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logementsData from '../assets/logements.json'; 
+import '../styles/components/cards.scss';
 
 export default function Logements() {
   const [logements, setLogements] = useState([]);

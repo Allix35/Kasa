@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/LOGO.png';
 import logoFooter from '../assets/images/Logofooter.png'
 import PropTypes from 'prop-types';
+import '../styles/components/layout.scss';
 
 
 export default function Layout({ children }) {

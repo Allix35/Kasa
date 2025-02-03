@@ -1,7 +1,6 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-/* Version Desktop */
 .banner-elements {
   .banner {
     position: relative;
@@ -16,7 +15,6 @@
     margin: 0 auto;
     margin-bottom: 40px;
 
-    /* L'overlay passe au-dessus de l'image */
     .banner-overlay {
       position: absolute;
       top: 0;
@@ -51,10 +49,9 @@
   }
 }
 
-/* Housing container */
 .housing-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales sur desktop */
+  grid-template-columns: repeat(3, 1fr); 
   background-color: #F6F6F6;
   border-radius: 25px;
   width: 1240px;
@@ -64,53 +61,11 @@
   padding: 10px;
 }
 
-/* Housing card */
-.housing-card {
-  @include housing-card-style(#F6F6F6, 10px);
-  transition: transform 0.3s ease; 
-  margin: 0 auto;
-  margin: 20px;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  .housing-image {
-    transition: transform 0.3s ease;
-  }
-
-  .housing-title {
-    transition: transform 0.3s ease;
-  }
-
-  &:hover .housing-image {
-    transform: rotate(2deg);
-  }
-
-  &:hover .housing-title {
-    transform: rotate(2deg);
-  }
-
-  &::after {
-    @include overlay-card-style(black, 0.2);
-    display: none;
-  }
-}
-
-.housing-image {
-  @include housing-image-style();
-}
-
-.housing-title {
-  @include housing-title-style();
-}
-
-/* Version Mobile */
 
 @media (max-width: 768px) {
   .banner-elements .banner {
-    width: 335px; 
-    height: 111px;
+    width: 100%; 
+    height: auto;
     border-radius: 10px; 
     overflow: hidden; 
     margin-bottom: 20px;
@@ -127,7 +82,7 @@
     line-height: 1.2;
     -webkit-text-stroke: none; 
     text-shadow: none;
-    margin-left: -85px;
+    justify-content: flex-start;
   }
 
   .banner-title span {
@@ -144,19 +99,11 @@
 
   .housing-container {
     margin-top: 0;
-    grid-template-columns: 1fr; /* 1 colonne en mobile */
+    grid-template-columns: 1fr; 
     width: 100%;
     padding: 0px;
     background-color: $secondary-color;
-    gap: 10px;
-  }
-
-  .housing-card {
-    margin: 10px auto;
-    background-color: $secondary-color;
-    width: 335px;
-    height: 255px;
-    border-radius: 10px;
+    gap: 15px;
   }
 }
 

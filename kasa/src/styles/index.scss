@@ -1,9 +1,18 @@
+
 @use '../styles/variables' as *;
 @use '../styles/mixins' as *;
 @use '../styles/components/layout' as *;
 @use '../styles/pages/home' as *;
-@use '../styles/components/carrousel' as *;
+@use '../styles/components/cards.scss' as *;
 @use '../styles/pages/about' as *;
+@use '../styles/components/carrousel' as *;
 @use '../styles/pages/fichelogement' as *;
+@use '../styles/components/collapse.scss' as *;
 @use '../styles/pages/notfound' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 

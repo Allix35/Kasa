@@ -2,7 +2,7 @@
 
 .notfound-page {
     display: flex;
-    flex-direction: column; /* Passer en mode colonne */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     background-color: $secondary-color;
@@ -11,9 +11,9 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centrer les éléments verticalement */
-        flex-grow: 1; /* Permet au contenu de prendre toute la hauteur restante */
-        margin-bottom: 0; /* Annule toute marge */
+        justify-content: center; 
+        flex-grow: 1; 
+        margin-bottom: 0;
     }
 
     .notfound-title {
@@ -22,21 +22,21 @@
         font-size: 288px;
         font-weight: 700;
         text-align: center;
-        margin-top: 100px; /* Espacement sous le titre */
+        margin-top: 100px; 
     }
 
     .notfound-text {
         font-size: 36px;
         color: $tertiary-color;
         font-weight: 500;
-        margin-bottom: 100px; /* Marge sous le texte */
+        margin-bottom: 100px; 
         margin-top: -85px;
     }
 
     .notfound-return-link {
         font-size: 18px;
         color: $primary-color;
-        margin-bottom: 90px; /* Marge sous le lien */
+        margin-bottom: 90px; 
     }
 }
 
@@ -48,7 +48,7 @@
 
     .notfound-page .notfound-content {
         margin-top: 0;
-        flex-grow: 1; /* Permet à .notfound-content de prendre l'espace restant */
+        flex-grow: 1; 
     }
 
     .notfound-page .notfound-content .notfound-title {
@@ -59,17 +59,17 @@
 
     .notfound-page .notfound-content .notfound-text {
         font-size: 18px;
-        margin-bottom: 100px; /* Ajuste la marge sous le texte pour mobile */
-        margin-top: 0; /* Retire le margin-top sur mobile pour plus de lisibilité */
+        margin-bottom: 100px; 
+        margin-top: 0; 
     }
 
     .notfound-page .notfound-content .notfound-return-link {
         font-size: 14px;
-        margin-bottom: 51px; /* Réduit la marge sous le lien sur mobile */
+        margin-bottom: 51px; 
     }
 
     .notfound-text-line {
-        display: block; /* Permet à chaque span de passer à la ligne */
+        display: block; 
         text-align: center;
     }
 }

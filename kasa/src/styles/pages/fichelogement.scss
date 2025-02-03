@@ -1,23 +1,20 @@
 @use '../variables' as *;
 
-// Housing form text (Desktop and Mobile - Common Styles)
-
 .housing-form {
   position: relative;
   font-family: $font-text;
 }
 
-.housing-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+.housing-content {
+  max-width: 1240px;  
+  margin: 0 auto;     
+
 }
 
 .housing-info {
   display: flex;
   flex-direction: column;
-  margin-left: 140px;
+  width: 60%; 
 }
 
 .housing-form-title {
@@ -34,20 +31,50 @@
   margin-top: 0px;
 }
 
+.tags-info {
+  margin-top: -15px;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: $font-text;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    padding-left: 0;
+
+    li {
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      width: 115px;
+      height: 25px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-top: -5px;
+    }
+  }
+}
+
 .host-info {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 18px;
+
 }
 
 .host-name {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0;
+  margin-right: 10px;
 }
 
 .first-name,
 .last-name {
-  font-size: 1.2rem;
+  font-size: 18px;
   color: $tertiary-color;
   font-weight: 500;
   margin-bottom: 0;
@@ -59,70 +86,32 @@
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 139px;
-}
-
-.tags-rating-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -10px;
-  padding-left: 130px;
-  padding-right: 130px;
-}
-
-.tags-info {
-  flex: 1;
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-family: $font-text;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 25px;
-    text-align: center;
-    padding-left: 10px;
-
-    li {
-      background-color: $tertiary-color;
-      color: $secondary-color;
-      width: 115px;
-      height: 25px;
-      border-radius: 10px;
-      font-size: 14px;
-      margin-top: -25px;
-    }
-  }
 }
 
 .rating-info {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  gap: 5px;
+  width: 100%;
+  gap: 10px;
+  margin-top: 17px;
 
   .stars {
     display: flex;
     gap: 12px;
     color: #e3e3e3;
-    padding-right: 9px;
-    margin-top: -35px;
-  }
 
-  .active-stars {
-    color: $tertiary-color;
+    .active-stars {
+      color: $tertiary-color;
+    }
   }
 }
 
 .housing-form-collapse-container {
   display: flex;
-  width: 1240px;
-  gap: 76px;
-  margin-top: 5px;
-  padding-left: 140px;
+  margin-top: 40px;
   margin-bottom: 40px;
+  gap: 20px
 }
 
 .housing-form-collapse {
@@ -130,6 +119,7 @@
 
   .collapse-elements {
     font-size: 18px;
+    font-weight: 700;
     color: $secondary-color;
     background-color: $tertiary-color;
     border: none;
@@ -141,6 +131,10 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+  }
+
+  .collapse-equipment {
+    padding-right: 12px;
   }
 
   .fa-chevron-up {
@@ -162,7 +156,7 @@
     padding-left: 20px;
 
     li {
-      font-size: 1rem;
+      font-size: 14px;
       color: $primary-color;
       margin-bottom: 8px;
     }
@@ -185,25 +179,22 @@
   font-size: 18px;
   line-height: 25.67px;
   text-align: right;
+  margin-top: -111px;
 
   .host-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 10px;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 18px;
     color: $tertiary-color;
   }
 }
 
-// Mobile-specific styles
-
 @media (max-width: 768px) {
-
   .housing-header {
     flex-direction: column;
     align-items: flex-start;
@@ -216,28 +207,18 @@
   }
 
   .housing-form-title {
-    font-size: 1.6rem;
+    font-size: 18px;
   }
 
   .housing-location {
     font-size: 14px;
-    margin-top: 5px;
-  }
-
-  /* Tags under the location, aligned to the left */
-  .tags-rating-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   .tags-info {
     width: 100%;
     margin-bottom: 10px;
+    margin-left: 0px;
 
     ul {
       list-style-type: none;
@@ -258,18 +239,21 @@
         font-size: 12px;
         white-space: nowrap;
         max-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        flex-basis: 0;
       }
     }
   }
 
-  /* Align stars under tags to the left */
   .rating-info {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    width: 100%;
-    margin-top: 10px;
+    margin-top: -25px;
 
     .stars {
       display: flex;
@@ -282,42 +266,51 @@
     }
   }
 
-  /* Host info aligned to the right under stars */
   .host-info {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
-    width: 100%;
+    margin-top: -15px;
+    line-height: 17.11px;
   }
 
   .host-name {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
-  .host-image {
-    width: 50px;
-    height: 50px;
+  .host-info .host-name .first-name{
+    font-size: 12px;
+  }
+
+  .host-info .host-name .last-name{
+    font-size: 12px;
+  }
+
+  .host-info .host-image {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
   }
 
   .housing-form-collapse-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;  /* Augmenter l'espace entre chaque collapse */
+    gap: 15px;
     padding-left: 0;
     padding-right: 0;
     max-width: 100%;
     width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0px;
   }
 
   .housing-form-collapse {
     width: 100%;
-    margin-bottom: 15px; /* Espacement sous le dernier collapse avant le footer */
+    margin-bottom: 15px;
     .collapse-elements {
       font-size: 16px;
       text-align: left;
@@ -326,17 +319,18 @@
       justify-content: space-between;
       align-items: center;
     }
-       
-    .collapse-equipment {
-      margin-bottom: 15px;  /* Réduit l'espace sous la section "Équipements" */
+
+    .housing-equipment {
+      padding-right: 0px;
     }
 
     ul {
       padding-left: 0;
       li {
-        font-size: 1rem;
+        font-size: 14px;
         color: $primary-color;
         margin-bottom: 8px;
+        padding-left: 15px;
       }
     }
   }
@@ -344,5 +338,7 @@
   .housing-description {
     padding-left: 0;
     padding-right: 0;
+    padding-left: 15px;
   }
 }
+
