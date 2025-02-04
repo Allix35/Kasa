@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../styles/components/collapse.scss';
+import '../styles/components/about-collapse.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'; 
 

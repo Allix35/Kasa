@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/components/carrousel.scss';
+import '../styles/components/housing-carrousel.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Carrousel({ slides }) {

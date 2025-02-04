@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import '../../styles/pages/about.scss';
-import '../../styles/components/collapse.scss';
-import Collapse from '../../components/Collapse';
+import '../../styles/pages/global.scss';
+import '../../styles/components/about-banner.scss';
+import '../../styles/components/about-collapse.scss';
+import Collapse from '../../components/AboutCollapse';
 
 export default function About() {
   const [isOpen1, setIsOpen1] = useState(false);

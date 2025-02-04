@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import logementsData from '../../assets/logements.json';
-import Carousel from '../../components/Carrousel';
+import Carousel from '../../components/HousingCarrousel';
 import NotFound from '../NotFound';
+import '../../styles/pages/global.scss';
 import '../../styles/pages/fichelogement.scss';
-import '../../styles/components/carrousel.scss';
+import '../../styles/components/housing-carrousel.scss';
 
 export default function FicheLogement() {
   const { id } = useParams();

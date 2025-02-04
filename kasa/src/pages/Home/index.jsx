@@ -1,6 +1,7 @@
-import '../../styles/components/cards.scss';
+import '../../styles/pages/global.scss';
+import '../../styles/components/home-cards.scss';
 import '../../styles/pages/home.scss';
-import Logements from '../../components/Cards';
+import Logements from '../../components/HomeCards';
 
 export default function Home() {
   return (
