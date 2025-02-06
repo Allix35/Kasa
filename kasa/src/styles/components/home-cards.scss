@@ -3,6 +3,18 @@
 
 /* Housing card */
 
+.housing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  width: 1240px;
+  margin: 0 auto;
+  justify-items: center; 
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
 .housing-card {
     @include housing-card-style(#F6F6F6, 10px);
     transition: transform 0.3s ease; 
@@ -44,6 +56,14 @@
   }
 
   @media (max-width: 768px) {
+    .housing-container {
+      margin-top: 0;
+      grid-template-columns: 1fr; 
+      width: 100%;
+      padding: 0px;
+      background-color: $secondary-color;
+      gap: 15px;
+    }
     .housing-card {
         margin: 0px auto;
         background-color: $secondary-color;

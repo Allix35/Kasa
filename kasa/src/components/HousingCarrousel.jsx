@@ -3,26 +3,31 @@ import PropTypes from 'prop-types';
 import '../styles/components/housing-carrousel.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-function Carrousel({ slides }) {
+export default function HousingCarrousel({ slides = [] }) {
   const [current, setCurrent] = useState(0);
+
+  if (!Array.isArray(slides) || slides.length === 0) {
+    return (
+      <div className="carrousel-error">
+        <p>Aucune image disponible.</p>
+      </div>
+    );
+  }
+
   const length = slides.length;
 
   const nextImage = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
   };
 
   const prevImage = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
   };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
 
   return (
     <section className="carrousel">
       {length > 1 && (
-        <button className="left-arrow" onClick={prevImage}>
+        <button className="left-arrow" onClick={prevImage} aria-label="Image précédente">
           <i className="fa-solid fa-chevron-left"></i>
         </button>
       )}
@@ -41,7 +46,7 @@ function Carrousel({ slides }) {
         ))}
       </div>
       {length > 1 && (
-        <button className="right-arrow" onClick={nextImage}>
+        <button className="right-arrow" onClick={nextImage} aria-label="Image suivante">
           <i className="fa-solid fa-chevron-right"></i>
         </button>
       )}
@@ -49,11 +54,12 @@ function Carrousel({ slides }) {
   );
 }
 
-Carrousel.propTypes = {
+HousingCarrousel.propTypes = {
   slides: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default Carrousel;
+
+
 
 
 

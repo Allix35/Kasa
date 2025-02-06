@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import '../../styles/pages/global.scss';
-import '../../styles/components/about-banner.scss';
-import '../../styles/components/about-collapse.scss';
-import Collapse from '../../components/AboutCollapse';
+import { useState } from "react";
+import "../../styles/pages/global.scss";
+import "../../styles/components/about-banner.scss";
+import "../../styles/components/about-collapse.scss";
+import Collapse from "../../components/AboutCollapse";
+import AboutBanner from "../../components/AboutBanner"; 
 
 export default function About() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -12,11 +13,8 @@ export default function About() {
 
   return (
     <div>
-      <div className="about-banner">
-        <img src="/src/assets/images/Imagesource2.png" alt="Bannière" className="about-banner-image"/>
-        <div className="banner-overlay"></div>
-      </div>
-
+      <AboutBanner /> 
+      
       <Collapse 
         isOpen={isOpen1} 
         title="Fiabilité" 
@@ -51,6 +49,7 @@ export default function About() {
     </div>
   );
 }
+
 
 
 

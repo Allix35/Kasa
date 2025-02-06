@@ -1,0 +1,83 @@
+@use '../variables' as *;
+
+.host-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 25.67px;
+  text-align: right;
+  margin-top: -111px;
+    .host-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    p {
+        font-size: 18px;
+        color: $tertiary-color;
+    }
+}
+
+.host-name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.first-name,
+.last-name {
+  font-size: 18px;
+  color: $tertiary-color;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.host-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 18px;
+    color: $tertiary-color;
+  }
+
+  @media (max-width: 768px) {
+  
+    .host-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin-top: -15px;
+      line-height: 17.11px;
+    }
+  
+    .host-name {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0px;
+    }
+  
+    .host-info .host-name .first-name{
+      font-size: 12px;
+    }
+  
+    .host-info .host-name .last-name{
+      font-size: 12px;
+    }
+  
+    .host-info .host-image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }

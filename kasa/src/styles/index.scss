@@ -3,12 +3,15 @@
 @use '../styles/mixins' as *;
 @use '../styles/pages/global.scss' as *;
 @use '../styles/components/layout.scss' as *;
-@use '../styles/pages/home.scss' as *;
+@use '../styles/components/home-banner.scss' as *;
 @use '../styles/components/home-cards.scss' as *;
 @use '../styles/components/about-banner.scss' as *;
 @use '../styles/components/about-collapse.scss' as *;
-@use '../styles/pages/fichelogement.scss' as *;
 @use '../styles/components/housing-carrousel.scss' as *;
+@use '../styles/components/housing-header.scss' as *;
+@use '../styles/components/housing-rating.scss' as *;
+@use '../styles/components/housing-host.scss' as *;
+@use '../styles/components/housing-collapse.scss' as *;
 @use '../styles/pages/notfound.scss' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');

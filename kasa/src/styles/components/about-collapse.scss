@@ -1,96 +1,103 @@
 @use '../variables' as *;
 
-.collapse {
+.about-collapse {
     max-width: 1024px;
     margin: 0 auto;
     margin-top: 35px;
     margin-bottom: 35px;
-  
-    .collapse-elements {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: $font-text;
-      background-color: $tertiary-color;
-      color: $secondary-color;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 34.22px;
-      border: none;
-      width: 1023px; 
-      height: 52px;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 5px;
-      box-sizing: border-box;
+
+    .about-collapse-elements {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $font-text;
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 34.22px;
+        border: none;
+        width: 100%; 
+        min-height: 52px;
+        padding: 15px;
+        border-radius: 5px;
+        box-sizing: border-box;
     }
-  
-    .collapse-content {
-      font-family: $font-text;
-      padding: 15px;
-      font-size: 18px;
-      line-height: 25.67px;
-      max-height: 0; 
-      overflow: hidden; 
-      transition: max-height 0.3s ease-in-out;
-      width: 100%;  
-      box-sizing: border-box;
-      align-items: flex-start;
-      margin-bottom: 35px;
+
+    .about-collapse-content {
+        font-family: $font-text;
+        padding: 15px;
+        font-size: 18px;
+        line-height: 25.67px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: flex-start;
+        margin-bottom: 35px;
     }
-  
-    .collapse-button {
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      width: 42px;
-      height: 42px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    .about-collapse-button {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  
+
     .arrow-icon {
-      font-size: 24px; 
-      transition: transform 0.3s ease; 
+        font-size: 24px;
+        transition: transform 0.3s ease;
     }
-  
+
     .rotate {
-      transform: rotate(-180deg); 
+        transform: rotate(-180deg);
     }
-  
+
     &.open {
-      background-color: #F6F6F6; 
-      border-radius: 0 0 8px 8px;
-      
-      .collapse-content {
-        display: block;
-        max-height: 500px;
-        width: auto; 
-      }
+        background-color: #F6F6F6;
+        border-radius: 0 0 8px 8px;
+
+        .about-collapse-content {
+            display: block;
+            max-height: 500px;
+            padding: 15px;
+        }
     }
-  }
-
-
-@media (max-width: 768px) {
-  .collapse .collapse-elements {
-    width: 100%;  
-    height: 52px; 
-    padding-left: 15px;
-    padding-right: 15px; 
-    border-radius: 5px;
-  }
-
-  .collapse-content {
-    font-family: $font-text;
-    padding: 15px;
-    font-size: 18px;
-    line-height: 25.67px;
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.3s ease-in-out;
-    width: 100%;  
-    box-sizing: border-box;
-  }
 }
+
+/* ✅ Adaptation responsive */
+@media (max-width: 768px) {
+    .about-collapse {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .about-collapse-elements {
+        font-size: 18px;
+        padding: 12px;
+        height: 32px;
+    }
+
+    .about-collapse-content {
+        font-size: 16px;
+        line-height: 24px;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    }
+
+    .about-collapse.open .about-collapse-content {
+        max-height: 500px;
+        overflow: visible;
+        padding: 12px;
+    }
+}
+

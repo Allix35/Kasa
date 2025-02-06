@@ -1,7 +1,25 @@
 
+/*{
+    border: 1px solid red;
+}*/
+
 body {
     font-family: 'Montserrat', sans-serif;
   }
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1; // ✅ Permet au contenu de s'étendre sans pousser le footer
+}
+
+footer {
+    margin-top: auto; // ✅ S'assure que le footer reste en bas
+}
 
   
 @media (max-width: 768px) {

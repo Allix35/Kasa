@@ -5,20 +5,21 @@ import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 const Collapse = ({ isOpen, children, title, onClick }) => {
   return (
-    <div className={`collapse ${isOpen ? 'open' : ''}`}>
-      <div className="collapse-elements">
+    <div className={`about-collapse ${isOpen ? 'open' : ''}`}>
+      <div className="about-collapse-elements">
         <span>{title}</span>
-        <button className="collapse-button" onClick={onClick}>
+        <button className="about-collapse-button" onClick={onClick}>
           <FontAwesomeIcon 
             icon={faAngleUp} 
             className={`arrow-icon ${isOpen ? 'rotate' : ''}`} 
           />
         </button>
       </div>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      {isOpen && <div className="about-collapse-content">{children}</div>}
     </div>
   );
 };
+
 
 Collapse.propTypes = {
   isOpen: PropTypes.bool.isRequired,

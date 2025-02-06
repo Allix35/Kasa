@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import FicheLogement from '../pages/FicheLogement';
-import NotFound from '../pages/NotFound';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
+import HousingForm from './pages/HousingForm';
 
 export default function AppRouter() {
   return (
@@ -29,7 +29,7 @@ export default function AppRouter() {
           path="/logement/:id"
           element={
             <Layout>
-              <FicheLogement />
+              <HousingForm />
             </Layout>
           }
         />
@@ -45,5 +45,3 @@ export default function AppRouter() {
     </Router>
   );
 }
-
-

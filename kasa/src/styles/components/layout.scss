@@ -66,7 +66,7 @@ footer {
     display: flex;
     justify-content: center;  
     align-items: center;      
-    height: 200px;            
+    min-height: 200px;            
     background-color: $primary-color;
 }
 
@@ -92,6 +92,7 @@ footer p {
     font-weight: 500;
     line-height: 34.22px;
     margin-bottom: -85px;
+    color: $secondary-color;  
 }
 
 @media (max-width: 768px) {
@@ -104,7 +105,7 @@ footer p {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0px;
+    padding: 20px 0;
   }
 
   .logo-header {
