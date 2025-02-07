@@ -2,6 +2,7 @@
 
 .about-collapse {
     max-width: 1024px;
+    height: auto;
     margin: 0 auto;
     margin-top: 35px;
     margin-bottom: 35px;
@@ -29,7 +30,7 @@
         padding: 15px;
         font-size: 18px;
         line-height: 25.67px;
-        max-height: 0;
+        height: auto;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
         width: 100%;

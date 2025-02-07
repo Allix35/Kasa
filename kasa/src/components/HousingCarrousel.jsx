@@ -1,10 +1,15 @@
-import { useState } from 'react';
+
+import { useState } from 'react'; {/* Hook import*/}
 import PropTypes from 'prop-types';
 import '../styles/components/housing-carrousel.scss';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+{/* Function to display image using prop slide or return empty array */}
 
 export default function HousingCarrousel({ slides = [] }) {
-  const [current, setCurrent] = useState(0);
+  
+  const [current, setCurrent] = useState(0); {/* Display current image, start with first index*/}
 
   if (!Array.isArray(slides) || slides.length === 0) {
     return (
@@ -14,29 +19,50 @@ export default function HousingCarrousel({ slides = [] }) {
     );
   }
 
+  {/* Stock images in to slide */}
+
   const length = slides.length;
 
+  {/* Function for next image */}
+
   const nextImage = () => {
-    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1)); {/* Last image to 1st image*/}
   };
 
+ {/* Function for preview image */}
+
   const prevImage = () => {
-    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1)); {/* 1st image to Last image */}
   };
 
   return (
     <section className="carrousel">
+      
+      {/* Display left arrow if few images */}
+
       {length > 1 && (
         <button className="left-arrow" onClick={prevImage} aria-label="Image précédente">
-          <i className="fa-solid fa-chevron-left"></i>
+          <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       )}
+
+      {/* Image container */}
+
       <div className="image-container">
+
+        {/* Iterate all images to display (starting with active image) and add them unique key */}
+
         {slides.map((image, index) => (
           <div key={index} className={`slide ${index === current ? 'active' : ''}`}>
+            
+            {/* Display image if index = selected image */}
+
             {index === current && (
               <img src={image} alt={`Logement ${index + 1}`} className="slide__image" />
             )}
+
+            {/* Display numbers */}
+
             {index === current && length > 1 && (
               <span className="slide__number">
                 {current + 1}/{length}
@@ -45,17 +71,23 @@ export default function HousingCarrousel({ slides = [] }) {
           </div>
         ))}
       </div>
+
+      {/* Display right arrow if few images  */}
+
       {length > 1 && (
         <button className="right-arrow" onClick={nextImage} aria-label="Image suivante">
-          <i className="fa-solid fa-chevron-right"></i>
+          <FontAwesomeIcon icon={faChevronRight} />
         </button>
       )}
+
     </section>
   );
 }
 
+{/* Ckecking prop slide, must return array with URL */}
+
 HousingCarrousel.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slides: PropTypes.arrayOf(PropTypes.string).isRequired,  
 };
 
 

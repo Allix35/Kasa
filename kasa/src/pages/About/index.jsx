@@ -5,6 +5,8 @@ import "../../styles/components/about-collapse.scss";
 import Collapse from "../../components/AboutCollapse";
 import AboutBanner from "../../components/AboutBanner"; 
 
+// Using UseState for collapse statement
+
 export default function About() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);

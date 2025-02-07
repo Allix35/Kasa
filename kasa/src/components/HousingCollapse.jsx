@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "../styles/components/housing-collapse.scss"; // ✅ Assure-toi que le fichier SCSS existe
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import "../styles/components/housing-collapse.scss"; 
 
 export default function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +11,10 @@ export default function Collapse({ title, children }) {
       <div className={`housing-collapse ${isOpen ? "open" : ""}`}>
         <button className="housing-collapse-header" onClick={() => setIsOpen(!isOpen)}>
           {title}
-          <i className={`fa-solid fa-chevron-up ${isOpen ? "rotate" : ""}`} />
+          <FontAwesomeIcon 
+            icon={faAngleUp} 
+            className={`arrow-icon ${isOpen ? 'rotate' : ''}`} 
+          />
         </button>
         <div className="housing-collapse-content">
           {isOpen && <div className="content">{children}</div>}
@@ -18,9 +23,9 @@ export default function Collapse({ title, children }) {
     );
 }
 
-// ✅ Validation des props avec PropTypes
+// Validation des props
 Collapse.propTypes = {
-  title: PropTypes.string.isRequired, // Le titre du collapse
-  children: PropTypes.node.isRequired, // Le contenu (texte, liste...)
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired, 
 };
 

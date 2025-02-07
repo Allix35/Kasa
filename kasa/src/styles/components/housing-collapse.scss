@@ -1,18 +1,16 @@
 @use '../variables' as *;
 
 .housing-collapse-container {
-  display: flex;  // 📌 Met les collapses en ligne
-  flex-wrap: wrap; // 📌 Permet de gérer les petits écrans
+  display: flex;  
+  flex-wrap: wrap; 
   gap: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
-  justify-content: space-between; // 📌 Ajoute un espacement équilibré
+  justify-content: space-between; 
 }
 
-/* ✅ Style général du collapse */
 .housing-collapse {
   flex: 1;
-  background-color: #F6F6F6;
   border-radius: 5px;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
@@ -42,7 +40,6 @@
     transform: rotate(-180deg);
   }
 
-  /* ✅ Gestion du collapse ouvert */
   &.open {
     background-color: #F6F6F6;
     border-radius: 0 0 8px 8px;
@@ -56,7 +53,6 @@
     }
   }
 
-  /* ✅ Contenu masqué par défaut */
   .housing-collapse-content {
     font-family: $font-text;
     padding: 0 15px;
@@ -85,7 +81,6 @@
   }
 }
 
-/* ✅ Description du logement */
 .housing-description {
   padding-left: 20px;
   padding-right: 20px;
@@ -94,7 +89,6 @@
   line-height: 21px;
 }
 
-/* ✅ Informations logement (rating, host...) */
 .housing-details {
   display: flex;
   justify-content: space-between;
@@ -102,7 +96,6 @@
   margin-top: 30px;
 }
 
-/* 📌 ✅ MEDIA QUERIES POUR MOBILE */
 @media (max-width: 768px) {
   
   .housing-collapse-container {
@@ -145,5 +138,6 @@
     padding-left: 15px;
   }
 }
+
 
 

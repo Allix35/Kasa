@@ -18,34 +18,38 @@ export default function HousingForm() {
   const { id } = useParams();
   const logement = logementsData.find((logement) => logement.id === id);
 
-  // Debugging: Vérifier les données du logement
   console.log("Logement trouvé :", logement);
 
-  // Si le logement n'est pas trouvé, afficher la page 404
   if (!logement) {
     return <NotFound />;
   }
 
   return (
     <div className="housing-form">
-      {/* Vérification des images avant d'afficher le carrousel */}
+
+      {/* Checking pictures before displaying */}
+
       <HousingCarrousel slides={logement.pictures || []} />
 
       <div className="housing-content">
-        {/* En-tête du logement */}
+
+        {/* Housing Header */}
+       
         <HousingHeader 
           title={logement.title || "Titre inconnu"} 
           location={logement.location || "Lieu inconnu"} 
           tags={logement.tags || []} 
         />
 
-        {/* Informations sur l'hôte et la notation */}
+        {/* Rate & Host */}
+       
         <div className="host-rating-container">
           <HostInfo host={logement.host || { name: "Hôte inconnu", picture: "" }} />
           <Rating rating={Number(logement.rating) || 0} />
         </div>
 
-        {/* Sections collapsibles */}
+        {/* Collapse */}
+
         <div className="housing-collapse-container">
           <Collapse title="Description">
             {logement.description || "Aucune description disponible."}
