@@ -1,25 +1,21 @@
 @use '../variables' as *;
 
-/* ✅ HEADER - Centrage et espace entre logo et liens */
 header {
   display: flex;
-  justify-content: center; /* Centre le header dans la page */
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1240px; /* Aligné avec le reste du contenu */
-  margin: 0 auto; /* Centre horizontalement */
+  max-width: 1240px;
+  margin: 0 auto;
   padding: 20px 0;
 }
 
-/* ✅ NAV - Organisation en row avec space-between */
 nav {
   display: flex;
-  justify-content: space-between; /* Espace entre logo et liens */
+  justify-content: space-between; 
   align-items: center;
   width: 100%;
 }
 
-/* ✅ LOGO */
 .logo-header {
   display: flex;
   align-items: center;
@@ -30,13 +26,12 @@ nav {
   height: auto;
 }
 
-/* ✅ LISTE DE NAVIGATION */
 nav ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 40px; /* Ajoute un espace entre les liens */
+  gap: 40px; 
 }
 
 nav li {
@@ -56,8 +51,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-
-/* ✅ FOOTER */
 footer {
   display: flex;
   justify-content: center;
@@ -91,20 +84,21 @@ footer p {
   color: $secondary-color;
 }
 
-/* ✅ RESPONSIVE */
 @media (max-width: 768px) {
   header {
-    max-width: 90%; /* Ajuste pour petits écrans */
+    max-width: 100%; 
     padding: 10px 0;
   }
 
   nav {
-    flex-direction: row; /* Garde l'alignement horizontal */
+    flex-direction: row; 
     justify-content: space-between;
+    margin: 15px;
+    margin-bottom: 0px;
   }
 
   .logo {
-    width: 100px; /* Réduit la taille sur mobile */
+    width: 100px; 
   }
 
   nav ul {
@@ -115,7 +109,6 @@ footer p {
     font-size: 14px;
   }
 
-    /* ✅ FOOTER MOBILE */
   footer {
     padding: 20px 10px;
   }

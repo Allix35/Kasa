@@ -15,6 +15,9 @@ import "../../styles/components/housing-carrousel.scss";
 import "../../styles/pages/global.scss";
 
 export default function HousingForm() {
+
+   {/* Get the params. id of URL and Searching the right housing from id in JSON file */}
+
   const { id } = useParams();
   const logement = logementsData.find((logement) => logement.id === id);
 

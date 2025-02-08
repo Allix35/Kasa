@@ -19,7 +19,7 @@
         line-height: 34.22px;
         border: none;
         width: 100%; 
-        min-height: 52px;
+        height: 52px;
         padding: 15px;
         border-radius: 5px;
         box-sizing: border-box;
@@ -72,17 +72,16 @@
     }
 }
 
-/* ✅ Adaptation responsive */
 @media (max-width: 768px) {
     .about-collapse {
         width: 100%;
-        margin: 20px auto;
+
     }
 
     .about-collapse-elements {
         font-size: 18px;
         padding: 12px;
-        height: 32px;
+        height: auto;
     }
 
     .about-collapse-content {
@@ -101,4 +100,3 @@
         padding: 12px;
     }
 }
-

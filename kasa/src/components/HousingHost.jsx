@@ -15,7 +15,6 @@ export default function HostInfo({ host }) {
   );
 }
 
-// ✅ Ajout de la validation des props
 HostInfo.propTypes = {
   host: PropTypes.shape({
     name: PropTypes.string.isRequired,

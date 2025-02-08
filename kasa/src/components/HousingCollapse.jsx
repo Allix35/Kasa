@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from "react";      {/* Hook to stock and modify active image index */}
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import "../styles/components/housing-collapse.scss"; 
 
 export default function Collapse({ title, children }) {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); // Defined collapse state
   
     return (
       <div className={`housing-collapse ${isOpen ? "open" : ""}`}>
@@ -23,7 +23,6 @@ export default function Collapse({ title, children }) {
     );
 }
 
-// Validation des props
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired, 

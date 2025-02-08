@@ -4,10 +4,14 @@ import PropTypes from "prop-types";
 export default function HousingHeader({ title, location, tags }) {
   return (
     <div className="housing-info">
+
+     {/* Housing info */}
+
       <h1 className="housing-form-title">{title}</h1>
       <p className="housing-location">{location}</p>
 
       {/* Tags */}
+
       <div className="tags-info">
         <ul>
           {tags.map((tag, index) => (
@@ -19,7 +23,6 @@ export default function HousingHeader({ title, location, tags }) {
   );
 }
 
-// ✅ Ajout de la validation des props
 HousingHeader.propTypes = {
   title: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

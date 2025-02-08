@@ -1,5 +1,5 @@
 
-import { useState } from 'react'; {/* Hook import*/}
+import { useState } from 'react'; {/* Hook import to stock and modify images index*/}
 import PropTypes from 'prop-types';
 import '../styles/components/housing-carrousel.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,19 +38,11 @@ export default function HousingCarrousel({ slides = [] }) {
   return (
     <section className="carrousel">
       
-      {/* Display left arrow if few images */}
-
-      {length > 1 && (
-        <button className="left-arrow" onClick={prevImage} aria-label="Image précédente">
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-      )}
-
       {/* Image container */}
 
       <div className="image-container">
 
-        {/* Iterate all images to display (starting with active image) and add them unique key */}
+        {/* Iterate all images and index in arrow slide and add them unique key */}
 
         {slides.map((image, index) => (
           <div key={index} className={`slide ${index === current ? 'active' : ''}`}>
@@ -77,6 +69,14 @@ export default function HousingCarrousel({ slides = [] }) {
       {length > 1 && (
         <button className="right-arrow" onClick={nextImage} aria-label="Image suivante">
           <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      )}
+
+     {/* Display left arrow if few images */}
+
+      {length > 1 && (
+        <button className="left-arrow" onClick={prevImage} aria-label="Image précédente">
+          <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       )}
 
