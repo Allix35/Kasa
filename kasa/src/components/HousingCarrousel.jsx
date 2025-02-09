@@ -42,7 +42,7 @@ export default function HousingCarrousel({ slides = [] }) {
 
       <div className="image-container">
 
-        {/* Iterate all images and index in arrow slide and add them unique key */}
+        {/* Iterate all images and index in arr slide and add them unique key */}
 
         {slides.map((image, index) => (
           <div key={index} className={`slide ${index === current ? 'active' : ''}`}>

@@ -18,7 +18,7 @@ const Collapse = ({ isOpen, children, title, onClick }) => {
           />
         </button>
       </div>
-      {isOpen && <div className="about-collapse-content">{children}</div>}  {/* Display content if isOpen is tuue */}
+      {isOpen && <div className="about-collapse-content">{children}</div>}  {/* Display content if isOpen is true */}
     </div>
   );
 };
